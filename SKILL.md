@@ -48,7 +48,7 @@ Vague simple sentences fail. Write `The comparison in Sec. 4.2 omits the stronge
 
 Default order: English review → `论文解读` → Chinese review → `Recommendation`. Omit sections the language pack does not request. Do not use bold lead sentences, bold inline headings, or labels followed by a colon, including `Issue:`, `Reason/impact:`, and `Suggestion:`.
 
-Each numbered Strengths or Weaknesses point is 2–3 simple sentences and no more. Keep every sentence medium length. If those 2–3 sentences still read as a long block, split them into two short paragraphs inside the same numbered point, for example issue and impact in the first paragraph and the suggestion in the second. Do not add a fourth sentence to make the extra paragraph. If more content remains, start a new numbered point.
+Each numbered Strengths or Weaknesses point is one paragraph of 2–3 simple sentences and no more. Keep every sentence medium length. Do not split a point into multiple paragraphs. If more content remains, start a new numbered point.
 
 ### Summary
 
@@ -61,7 +61,7 @@ One compact paragraph, 4–6 sentences. Descriptive, not evaluative. Paraphrase 
 
 ### Strengths
 
-About three numbered points, only if the manuscript supports them. Each point: 2–3 simple sentences, first the core strength, then analysis or evidence. If the block is too long, split into paragraphs; do not write more sentences. Calibrate praise: prefer “reasonable”, “interesting”, or “inspiring” over overstated novelty. Avoid generic praise without evidence.
+About three numbered points, only if the manuscript supports them. Each point: one paragraph of 2–3 simple sentences, first the core strength, then analysis or evidence. Calibrate praise: prefer “reasonable”, “interesting”, or “inspiring” over overstated novelty. Avoid generic praise without evidence.
 
 Select from:
 
@@ -74,7 +74,7 @@ Select from:
 
 ### Weaknesses
 
-At least three numbered, prioritized points. Each point: 2–3 simple sentences. When needed, put issue, impact, and suggestion in separate sentences; if that makes the point too long, split into two short paragraphs rather than adding sentences. Preferred flow: one specific limitation; why it affects novelty, validity, effectiveness, clarity, or reproducibility; one feasible way to resolve or clarify it. Phrase suggestions as “It would be helpful to…” or “It would be better to…”. Omit impact or suggestion only when redundant or unsupported.
+At least three numbered, prioritized points. Each point: one paragraph of 2–3 simple sentences. When needed, put issue, impact, and suggestion in separate sentences. Preferred flow: one specific limitation; why it affects novelty, validity, effectiveness, clarity, or reproducibility; one feasible way to resolve or clarify it. Phrase suggestions as “It would be helpful to…” or “It would be better to…”. Omit impact or suggestion only when redundant or unsupported.
 
 Inspect as applicable:
 
@@ -134,4 +134,4 @@ Before returning, remove common AI-writing patterns while keeping a formal acade
 - The Chinese review matches the English review when both exist.
 - The recommendation is one of the four tiers and follows from the written strengths and weaknesses.
 - Sentences are simple, each with one definite meaning.
-- Each Strengths or Weaknesses point is 2–3 sentences and not a long block; split into paragraphs if needed, never by adding a fourth sentence.
+- Each Strengths or Weaknesses point is one paragraph of 2–3 simple sentences, not a long block and not split into sub-paragraphs.
