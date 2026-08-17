@@ -1,7 +1,6 @@
 # review-ml-paper
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Cursor%20%7C%20Codex%20%7C%20Claude%20Code-0A7A3E.svg)](https://agentskills.io)
 
 面向机器学习、数据挖掘与人工智能论文的审稿 Agent Skill。仓库地址为 [JiaweiSheng/review-ml-paper-skill](https://github.com/JiaweiSheng/review-ml-paper-skill)。给定稿件、PDF、摘要、实验部分或已有审稿笔记后，默认输出：
@@ -141,8 +140,7 @@ Recommendation
 ├── .codex-plugin/                # Codex 插件清单
 ├── .agents/plugins/              # Agent Skills 市场清单
 ├── README.md
-├── LICENSE
-└── CHANGELOG.md
+└── LICENSE
 ```
 
 `SKILL.md` 仅保留 Agent Skills 规范中的可移植字段：`name`、`description`、`license`、`compatibility`、`metadata`。Cursor 的 `disable-model-invocation`、Claude 的 `user-invocable` 以及 Codex 的界面文案均不写入该文件，以便三个平台共用同一套审稿指令。
@@ -154,6 +152,7 @@ Recommendation
 - 补充实验并非默认补救方式；讨论、澄清、对已有结果的分析或理论说明亦可构成充分支持。
 - 不以方法复杂视为优点，也不因方法简单而否定其贡献。
 - 仅记录已核实的笔误；来源不足时写 `None noted.`
+- 审稿用简单句：一句一事，少用从句和长定语，每句含义明确；句法简单即可，不必刻意写短。
 - 审稿意见之后给出四档建议：接受、弱收、弱拒、拒绝。
 
 ## 许可证

@@ -10,42 +10,47 @@ metadata:
 
 # Review ML Paper
 
-Produce a rigorous, constructive review that demonstrates accurate understanding and helps both authors and the meta-reviewer. Base every paper-specific statement on the supplied manuscript or notes. Never invent results, baselines, citations, section numbers, or typos.
+Produce a rigorous, constructive review that shows accurate understanding and helps authors and the meta-reviewer. Base every paper-specific statement on the supplied manuscript or notes. Never invent results, baselines, citations, section numbers, or typos.
 
 ## Workflow
 
-1. Read the full manuscript when available. If only excerpts are supplied, state the scope limitation and avoid judging unseen material.
-2. Extract the task, importance, prior-work gap, proposed method, main components, datasets, baselines, metrics, principal results, ablations, and claimed conclusions.
-3. Check alignment across motivation, method, and experiments. Identify which claims are demonstrated, weakly supported, or untested.
-4. Choose the language pack. If the user asks for English only, write only the English review. If the user asks for Chinese only, write the Chinese `论文解读` and the Chinese review. If the user does not specify, write all three: English review, `论文解读`, and Chinese review.
-5. Draft each requested formal review in this order: `Summary`, `Strengths`, `Weaknesses`, `Questions`, `Typos`. When both languages are requested, keep the same sections, numbering, evidence, and meaning.
-6. When Chinese output is included, write `论文解读` before the Chinese review, organized as `任务问题`, `研究动机`, `方法思路`, and `实验效果`.
-7. After the requested review text, add a suggested recommendation: `Accept`, `Weak Accept`, `Weak Reject`, or `Reject`.
-8. Audit all statements against the paper. Use section, table, figure, equation, or page references when they make feedback easier to verify.
+1. Read the full manuscript when available. If only excerpts are supplied, state the scope limitation and do not judge unseen material.
+2. Extract the task, importance, prior-work gap, method, main components, datasets, baselines, metrics, principal results, ablations, and claimed conclusions.
+3. Check alignment across motivation, method, and experiments. Mark claims as demonstrated, weakly supported, or untested.
+4. Choose the language pack: English only → English review; Chinese only → `论文解读` plus Chinese review; unspecified → English review, then `论文解读`, then Chinese review.
+5. Write each requested formal review as `Summary`, `Strengths`, `Weaknesses`, `Questions`, `Typos`. If both languages are requested, keep the same sections, numbering, evidence, and meaning.
+6. After the requested review text, add one suggested recommendation: `Accept`, `Weak Accept`, `Weak Reject`, or `Reject`.
+7. Audit statements against the paper. Cite section, table, figure, equation, or page when that makes feedback easier to verify.
 
 ## Review Standard
 
-Separate three layers:
+Keep these three layers in separate sentences:
 
-- **Paper fact:** what the manuscript explicitly says or reports.
+- **Paper fact:** what the manuscript says or reports.
 - **Reviewer assessment:** why that fact is convincing, limited, or questionable.
 - **Actionable suggestion:** what evidence, analysis, clarification, comparison, or revision would address the issue.
 
-Distinguish the type of support needed for each concern:
+Match the remedy to the concern. Request discussion or clarification when the claim needs clearer scope, assumptions, intuition, limitations, positioning, or interpretation. Request an additional experiment only if the missing evidence could change the decision or is needed to test a central claim. Request theoretical analysis when the claim depends on mathematical validity, formal guarantees, or assumptions that experiments cannot establish. Extra experiments are not the default remedy.
 
-- Use a discussion or clarification request when the claim mainly needs clearer scope, assumptions, intuition, limitations, positioning, or interpretation.
-- Request an additional experiment only when the missing evidence could materially change the review decision or is necessary to test a central claim.
-- Request theoretical analysis or proof when a central claim depends on mathematical validity, formal guarantees, or assumptions that empirical evidence alone cannot establish.
+Do not reward complexity or dismiss a method for being simple. Judge whether it addresses the key problem, is interpretable or justified, and is empirically effective. Use firm language for verified problems and conditional language for missing context or plausible concerns.
 
-Do not treat experiments as the default remedy. A focused discussion, clearer argument, existing result analysis, or theoretical justification may provide sufficient support. State which form of support is appropriate and why.
+## Sentence Style
 
-Do not reward complexity by itself or dismiss a method merely for being simple. Judge whether it addresses the key problem, is interpretable or justified, and is empirically effective. Calibrate certainty: use firm language for directly verified problems and conditional language for missing context or plausible concerns.
+Applies to all review text, including `论文解读`.
+
+Write simple sentences, not necessarily short ones. A simple sentence has one independent clause. It may be medium length. Do not chop a complete idea into telegraphic fragments. Put one idea in each sentence. Do not pack a claim, a reason, and a hedge together.
+
+Prefer subject–verb–object. Split nested clauses into two simple sentences. Avoid stacked `which` / `that` / `where` modifiers, long `although` / `while` / `whereas` openers, `not only... but also...`, and `rather than..., which..., thereby...` chains. In Chinese, avoid long attributive modifiers and nested `的` phrases. Split `在...的情况下` and `由于...从而导致`.
+
+Vague simple sentences fail. Write `The comparison in Sec. 4.2 omits the strongest reported baseline`, not `The experiments are limited`.
 
 ## Output Format
 
+Default order: English review → `论文解读` → Chinese review → `Recommendation`. Omit sections the language pack does not request. Do not use bold lead sentences, bold inline headings, or labels followed by a colon, including `Issue:`, `Reason/impact:`, and `Suggestion:`.
+
 ### Summary
 
-Write one compact paragraph, normally 4–6 sentences. The aim is to show authors that the reviewer understood the paper and to give the meta-reviewer a fast overview. Draw from the abstract and introduction, but paraphrase rather than copying either. Keep this section descriptive, not evaluative. Cover, in order:
+One compact paragraph, 4–6 sentences. Descriptive, not evaluative. Paraphrase the abstract and introduction; do not copy them. Cover, in order:
 
 1. the studied task, including whether it is newly proposed and why it matters;
 2. the limitation in prior work on that task;
@@ -54,9 +59,9 @@ Write one compact paragraph, normally 4–6 sentences. The aim is to show author
 
 ### Strengths
 
-Give about three numbered points, selecting only strengths supported by the manuscript. Write 2–3 sentences per point. Use the first sentence to summarize the core strength and the remaining sentence or two to give concrete analysis or evidence. Start directly with the substance; do not use a bold lead sentence, bold inline heading, or label followed by a colon. Calibrate praise: prefer “reasonable”, “interesting”, or “inspiring” over overstated novelty claims.
+About three numbered points, only if the manuscript supports them. 2–3 sentences each: the first states the core strength; the rest give analysis or evidence. Calibrate praise: prefer “reasonable”, “interesting”, or “inspiring” over overstated novelty. Avoid generic praise without evidence.
 
-Select from these dimensions when the manuscript supports them:
+Select from:
 
 1. the research topic has clear value;
 2. the motivation is novel or reasonable;
@@ -65,70 +70,65 @@ Select from these dimensions when the manuscript supports them:
 5. experiments are extensive, useful for follow-up work, or they verify a claimed conclusion or the stated motivation;
 6. the paper is well organized, easy to follow, and clearly written.
 
-Avoid generic praise without evidence.
-
 ### Weaknesses
 
-Give at least three numbered, prioritized points. Write 2–3 fluent sentences per point. A point may include an issue, its impact, and a suggestion, but these are ingredients of the prose, not required labels. Do not write `Issue:`, `Reason/impact:`, `Suggestion:`, a bold lead sentence, a bold inline heading, or any label followed by a colon.
+At least three numbered, prioritized points. 2–3 sentences each. When needed, put issue, impact, and suggestion in separate sentences. Preferred flow: one specific limitation; why it affects novelty, validity, effectiveness, clarity, or reproducibility; one feasible way to resolve or clarify it. Phrase suggestions as “It would be helpful to…” or “It would be better to…”. Omit impact or suggestion only when redundant or unsupported.
 
-Prefer this flow when it fits: first sentence states an objective, specific limitation; the remaining sentence or two explain why it affects novelty, validity, effectiveness, clarity, or reproducibility, and offer a feasible way to resolve or clarify it. Phrase suggestions constructively, such as “It would be helpful to…” or “It would be better to…”. Omit an impact or suggestion only when it would be redundant or unsupported; never pad a point with empty labels.
+Inspect as applicable:
 
-Inspect these dimensions as applicable:
-
-- task importance and scope; be lenient on importance unless the topic is a poor venue fit or the claimed value is unsupported;
+- task importance and scope; be lenient unless the topic is a poor venue fit or the claimed value is unsupported;
 - whether the claimed motivation is evidenced by statistics, examples in a motivation figure, preliminary or plot experiments, or theory, especially for method papers;
-- methodological novelty relative to the most relevant prior work, judged by whether it addresses a key problem rather than by subjective impression; do not treat complexity as novelty; if the method is simple, judge whether it addresses the key problem, is interpretable, and is empirically effective; if it is complex, check that each main component is justified;
-- methodological soundness, intuition, formula rigor, and validation of questionable design choices; localize concerns to sections when possible, such as a problem or uncertainty in Sec. X;
-- effectiveness, whether gains are clear, magnitude and consistency of gains, variance or significance, experimental fairness, and setup quality;
-- consistency among motivation, proposed mechanism, experiments, and conclusions: whether the method addresses the motivated problem, and whether the experiments measure the degree of that resolution;
-- coverage of classic and recent baselines and completeness of related work; if submission or public dates are known, methods appearing within about three months before submission need not be experimental baselines but should be discussed; if dates cannot be verified, do not assert recency or omit a clearly relevant baseline on recency grounds;
+- novelty vs the most relevant prior work, judged by whether the method addresses a key problem; if simple, check interpretability and empirical effect; if complex, check that each main component is justified;
+- soundness, intuition, formula rigor, and validation of questionable design choices; localize to Sec. X when possible;
+- effectiveness: gain size and consistency, variance or significance, fairness, setup quality;
+- consistency among motivation, mechanism, experiments, and conclusions;
+- classic and recent baselines and related work; if dates are known, methods from about three months before submission need discussion but not necessarily experiments; if dates cannot be verified, do not assert recency or omit a clearly relevant baseline on recency grounds;
 - ablations, sensitivity, efficiency, robustness, generalization, limitations, and failure cases;
-- writing precision and information needed for reproducibility.
+- writing precision and reproducibility information.
 
-Do not demand every possible experiment. Suggest a new experiment only for a key issue that could affect the review decision, such as an untested central claim, an unfair comparison, or missing evidence for the main mechanism. For other issues, prefer discussion, clarification, analysis of existing results, limitations, or theoretical justification as appropriate. Make the needed evidence type clear in the prose without adding mechanical labels. Distinguish a missing experiment from a fatal flaw. When criticizing baseline coverage, identify the missing method or method family and explain its relevance; do not invent publication recency.
+Suggest a new experiment only for a decision-relevant gap: an untested central claim, an unfair comparison, or missing evidence for the main mechanism. Otherwise prefer discussion, clarification, analysis of existing results, limitations, or theory. Distinguish a missing experiment from a fatal flaw. When criticizing baselines, name the missing method or family and explain its relevance; do not invent publication dates.
 
 ### Questions
 
-Ask 2–5 concise questions whose answers could clarify a major uncertainty or affect the evaluation, especially for conferences with a rebuttal. Keep each numbered point to 1–3 sentences. When explanation is needed, use the first sentence to state the uncertainty and the remaining sentence or two to ask for the decisive evidence or explanation. Do not add bold lead sentences or repeat a weakness verbatim.
+2–5 questions whose answers could clarify a major uncertainty or change the evaluation, especially for rebuttal. 1–3 sentences each. The first sentence states the uncertainty; the rest ask for the decisive evidence. Do not repeat a weakness verbatim.
 
 ### Typos
 
-List only verified, obvious grammatical, notation, formatting, or cross-reference errors, with location and proposed correction. Keep each point brief and do not add bold lead sentences. If none are found or the source is insufficient, write `None noted.` Never fabricate typos.
+Only verified, obvious grammatical, notation, formatting, or cross-reference errors, with location and proposed correction. If none are found or the source is insufficient, write `None noted.`
 
-## 论文解读
+### 论文解读
 
-When Chinese output is included, place this section before the Chinese review. In the default three-part output, it sits between the English review and the Chinese review. Omit it for English-only output. Use these four subsections in order:
+Include only when Chinese output is requested. Place it before the Chinese review. Four subsections, 2–5 sentences each, explanatory not evaluative. Do not add criticisms absent from the formal review.
 
-1. `任务问题`: Explain the task, inputs and outputs, application setting, and why the problem matters.
-2. `研究动机`: Explain the limitation in prior work, the evidence for that limitation, and the gap the paper intends to address.
-3. `方法思路`: Explain the central idea, main components, how they interact, and how the design addresses the stated motivation.
-4. `实验效果`: Summarize the datasets, main comparisons, most important results, ablations or analyses, and the conclusions the evidence supports.
+1. `任务问题`: task, inputs and outputs, application setting, why it matters.
+2. `研究动机`: prior-work limitation, evidence for it, the intended gap.
+3. `方法思路`: central idea, main components, how they interact, how the design addresses the motivation.
+4. `实验效果`: datasets, main comparisons, most important results, ablations or analyses, supported conclusions.
 
-Write 2–5 concise Chinese sentences for each subsection. Select only the most important content needed to understand the review. Keep this section explanatory rather than evaluative, and do not introduce criticisms that are absent from the formal review.
+### Recommendation
 
-## Recommendation
+Last. Give a suggested decision, not an official score, numerical rating, or confidence box. Choose one:
 
-Place this section last, after all requested review text. The output order is: English review when requested, then `论文解读` when Chinese is included, then the Chinese review when requested, then `Recommendation`. Do not put the recommendation before or inside `Summary`, `Strengths`, `Weaknesses`, `Questions`, `Typos`, or `论文解读`. Give only a suggested decision, not an official conference score, numerical rating, or confidence box.
+- `Accept` / 接受: strengths clearly outweigh remaining issues; core claims are supported.
+- `Weak Accept` / 弱收: worthwhile contribution; fixable issues do not undermine the main claim.
+- `Weak Reject` / 弱拒: potentially interesting, but key novelty, soundness, or evidence gaps could change the decision.
+- `Reject` / 拒绝: central claims unsupported, flaws fatal, or poor venue fit.
 
-Choose exactly one of these four tiers:
+One or two sentences: the tier, then the decisive reason from the review just written. If both languages were produced, give it once with both names, e.g. `Weak Accept（弱收）`.
 
-- `Accept` / 接受: strengths clearly outweigh remaining issues, and the core claims are supported.
-- `Weak Accept` / 弱收: a worthwhile contribution with fixable issues that do not undermine the main claim.
-- `Weak Reject` / 弱拒: the paper is potentially interesting, but key novelty, soundness, or evidence gaps could change the decision.
-- `Reject` / 拒绝: central claims are unsupported, the flaws are fatal, or the topic is a poor venue fit.
+## Tone
 
-Write one or two sentences: the chosen tier, then the decisive reason grounded in the review just written. If both English and Chinese reviews are produced, give the recommendation once at the end, with both names, for example `Weak Accept（弱收）`.
+Keep the text concise, fluent, rigorous, natural, and plain. Use direct statements and concrete evidence. Do not use em dashes or en dashes, ornate wording, filler, repetitive transitions, forced three-part lists, promotional language, vague attribution, excessive hedging, or formulaic conclusions.
 
-## Tone and Language
+Be candid, neutral, and constructive. Prefer specific claims over subjective adjectives. Phrase weakness fixes as suggestions without softening clear factual criticism.
 
-Unless the user asks for one language only, write the formal English review first, then the Chinese `论文解读`, and finally a complete corresponding Chinese review. If both formal reviews are produced, preserve the same substance, numbering, level of criticism, and paper references; do not add or omit claims during translation.
+Before returning, remove common AI-writing patterns while keeping a formal academic-review voice. Do not add casual language, theatrical phrasing, personal anecdotes, or artificial personality. Do not include a humanization report or an explanation of edits.
 
-Keep the produced text concise, fluent, rigorous, natural, and plain. Prefer short or medium-length sentences and simple syntax. Avoid long sentences, nested clauses, unnecessary abstraction, ornate wording, filler, repetitive transitions, forced three-part lists, promotional language, vague attribution, excessive hedging, and formulaic conclusions. Use direct statements and concrete evidence. Do not use em dashes or en dashes.
+## Final Check
 
-Humanize the drafted review text by default before returning it. Remove common AI-writing patterns while preserving an appropriately formal academic-review voice. Vary sentence rhythm naturally, but do not inject casual language, theatrical phrasing, personal anecdotes, or artificial personality. Do not include a humanization report, draft critique, or explanation of edits in the delivered review.
-
-Be candid, neutral, and constructive. Prefer specific claims over subjective adjectives. Phrase weakness fixes as suggestions without weakening clear factual criticism.
-
-## Final Quality Check
-
-Verify that the summary matches the paper; strengths and weaknesses cite concrete evidence; weakness points read as fluent prose without `Issue:` / `Reason/impact:` / `Suggestion:` labels; claims, equations, tables, and baselines are not misrepresented; questions are useful for rebuttal; typos are real and locatable; and no content is invented. Confirm that each major strength and weakness has 2–3 sentences, its first sentence gives the core point, and its remaining sentences provide analysis or a proportionate suggestion when those help. Confirm that experimental requests are limited to decision-relevant evidence, while discussion and theoretical support are used where more appropriate. Check that `论文解读` is included whenever Chinese output is requested, with all four required subsections and 2–5 sentences each; that no point begins with bold text; that the Chinese review faithfully matches the English review when both are produced; and that a single four-tier recommendation appears after the requested review text and is consistent with the written strengths and weaknesses. Run a final humanization pass on the produced languages and remove overlong or unnecessarily complex sentences.
+- No invented facts; the summary matches the paper.
+- Strengths and weaknesses cite evidence; questions help rebuttal; typos are locatable or `None noted.`
+- Output matches the language pack and the section order above.
+- The Chinese review matches the English review when both exist.
+- The recommendation is one of the four tiers and follows from the written strengths and weaknesses.
+- Sentences are simple, each with one definite meaning.
