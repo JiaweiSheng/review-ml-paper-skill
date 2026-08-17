@@ -38,17 +38,15 @@ Do not reward complexity or dismiss a method for being simple. Judge whether it 
 
 Applies to all review text, including `论文解读`.
 
-Write simple sentences, not necessarily telegraphic ones. A simple sentence has one independent clause. Keep it medium length, not long. Split a sentence that would need extra clauses, stacked modifiers, or a long list. Do not chop a complete idea into fragments. Put one idea in each sentence. Do not pack a claim, a reason, and a hedge together.
+Write simple sentences with one independent clause and one idea. Keep them medium length, not long and not telegraphic. Split extra clauses, stacked modifiers, and long lists. Do not pack a claim, a reason, and a hedge together. Keep consecutive sentences fluent: add a conjunction or linking phrase where the logic needs it. Do not let simple sentences read as disconnected fragments.
 
-Prefer subject–verb–object. Split nested clauses into two simple sentences. Avoid stacked `which` / `that` / `where` modifiers, long `although` / `while` / `whereas` openers, `not only... but also...`, and `rather than..., which..., thereby...` chains. In Chinese, avoid long attributive modifiers and nested `的` phrases. Split `在...的情况下` and `由于...从而导致`.
-
-Vague simple sentences fail. Write `The comparison in Sec. 4.2 omits the strongest reported baseline`, not `The experiments are limited`.
+Prefer subject–verb–object. Avoid stacked `which` / `that` / `where`, long `although` / `while` / `whereas` openers, `not only... but also...`, and `rather than..., which..., thereby...`. In Chinese, avoid long attributive modifiers and nested `的` phrases. Split `在...的情况下` and `由于...从而导致`. Vague sentences fail: write `The comparison in Sec. 4.2 omits the strongest reported baseline`, not `The experiments are limited`.
 
 ## Output Format
 
 Default order: English review → `论文解读` → Chinese review → `Recommendation`. Omit sections the language pack does not request. Do not use bold lead sentences, bold inline headings, or labels followed by a colon, including `Issue:`, `Reason/impact:`, and `Suggestion:`.
 
-Each numbered Strengths or Weaknesses point is one paragraph of 2–3 simple sentences and no more. Keep every sentence medium length. Do not split a point into multiple paragraphs. If more content remains, start a new numbered point.
+Each numbered Strengths or Weaknesses point is one paragraph of 2–3 simple sentences, and at most 5. Do not split a point into multiple paragraphs. If more content remains, start a new numbered point.
 
 ### Summary
 
@@ -61,7 +59,7 @@ One compact paragraph, 4–6 sentences. Descriptive, not evaluative. Paraphrase 
 
 ### Strengths
 
-About three numbered points, only if the manuscript supports them. Each point: one paragraph of 2–3 simple sentences, first the core strength, then analysis or evidence. Calibrate praise: prefer “reasonable”, “interesting”, or “inspiring” over overstated novelty. Avoid generic praise without evidence.
+About three numbered points, only if the manuscript supports them. First sentence: the core strength; the rest: analysis or evidence. Calibrate praise: prefer “reasonable”, “interesting”, or “inspiring” over overstated novelty. Avoid generic praise without evidence.
 
 Select from:
 
@@ -74,9 +72,11 @@ Select from:
 
 ### Weaknesses
 
-At least three numbered, prioritized points. Each point: one paragraph of 2–3 simple sentences. When needed, put issue, impact, and suggestion in separate sentences. Preferred flow: one specific limitation; why it affects novelty, validity, effectiveness, clarity, or reproducibility; one feasible way to resolve or clarify it. Phrase suggestions as “It would be helpful to…” or “It would be better to…”. Omit impact or suggestion only when redundant or unsupported.
+List as many distinct, manuscript-supported weaknesses from the dimensions below as possible. Provide weaknesses with no duplicates and no omissions. Do not merge issues or invent concerns. Prioritize, but keep secondary points.
 
-Inspect as applicable:
+Write limitation, then impact, then a constructive suggestion when useful. Suggestions may use “It would be helpful to…” or “It would be better to…”, and may vary the wording.
+
+Inspect:
 
 - task importance and scope; be lenient unless the topic is a poor venue fit or the claimed value is unsupported;
 - whether the claimed motivation is evidenced by statistics, examples in a motivation figure, preliminary or plot experiments, or theory, especially for method papers;
@@ -86,9 +86,9 @@ Inspect as applicable:
 - consistency among motivation, mechanism, experiments, and conclusions;
 - classic and recent baselines and related work; if dates are known, methods from about three months before submission need discussion but not necessarily experiments; if dates cannot be verified, do not assert recency or omit a clearly relevant baseline on recency grounds;
 - ablations, sensitivity, efficiency, robustness, generalization, limitations, and failure cases;
-- writing precision and reproducibility information.
+- writing clarity, and reproducibility information.
 
-Suggest a new experiment only for a decision-relevant gap: an untested central claim, an unfair comparison, or missing evidence for the main mechanism. Otherwise prefer discussion, clarification, analysis of existing results, limitations, or theory. Distinguish a missing experiment from a fatal flaw. When criticizing baselines, name the missing method or family and explain its relevance; do not invent publication dates.
+Suggest a new experiment only for a decision-relevant gap: an untested central claim, an unfair comparison, or missing evidence for the main mechanism. A missing experiment is not automatically a fatal flaw. Name the missing baseline or family; do not invent dates.
 
 ### Questions
 
@@ -129,9 +129,9 @@ Before returning, remove common AI-writing patterns while keeping a formal acade
 ## Final Check
 
 - No invented facts; the summary matches the paper.
-- Strengths and weaknesses cite evidence; questions help rebuttal; typos are locatable or `None noted.`
+- Strengths cite evidence; questions help rebuttal; typos are locatable or `None noted.`
+- Weaknesses list every distinct supported limitation from the inspection dimensions, not a short subset.
 - Output matches the language pack and the section order above.
 - The Chinese review matches the English review when both exist.
 - The recommendation is one of the four tiers and follows from the written strengths and weaknesses.
-- Sentences are simple, each with one definite meaning.
-- Each Strengths or Weaknesses point is one paragraph of 2–3 simple sentences, not a long block and not split into sub-paragraphs.
+- Sentences are simple and connected; each Strengths or Weaknesses point is 2–3 sentences, at most 5.
