@@ -159,6 +159,8 @@ Recommendation
 - 简单句写清意思
 - 评分从已写优缺点推出
 
+请注意，最终的审稿内容由人来决定，本skill只负责提供辅助建议。
+
 ## 许可证
 
 MIT。详见 [LICENSE](LICENSE)。
