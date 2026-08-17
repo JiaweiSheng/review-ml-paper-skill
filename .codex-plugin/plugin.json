@@ -1,0 +1,34 @@
+{
+  "name": "review-ml-paper",
+  "version": "1.0.0",
+  "description": "Generate concise English and Chinese ML/CS paper reviews plus a four-part Chinese paper interpretation.",
+  "author": {
+    "name": "JiaweiSheng",
+    "url": "https://github.com/JiaweiSheng"
+  },
+  "homepage": "https://github.com/JiaweiSheng/review-ml-paper",
+  "repository": "https://github.com/JiaweiSheng/review-ml-paper",
+  "license": "MIT",
+  "keywords": [
+    "machine-learning",
+    "paper-review",
+    "peer-review",
+    "academic",
+    "data-mining",
+    "computer-science"
+  ],
+  "skills": "./",
+  "interface": {
+    "displayName": "ML Paper Reviewer",
+    "shortDescription": "Generate concise English and Chinese paper reviews plus a four-part Chinese interpretation.",
+    "longDescription": "A portable Agent Skill that drafts a conference-style English review, a four-part Chinese paper interpretation, and a matching Chinese review from a supplied manuscript, PDF, or notes.",
+    "developerName": "JiaweiSheng",
+    "category": "Productivity",
+    "brandColor": "#2563EB",
+    "websiteURL": "https://github.com/JiaweiSheng/review-ml-paper",
+    "defaultPrompt": [
+      "Use $review-ml-paper to review this manuscript.",
+      "Write a conference-style English review, a four-part Chinese interpretation, and a matching Chinese review."
+    ]
+  }
+}

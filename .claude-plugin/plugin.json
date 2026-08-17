@@ -1,0 +1,20 @@
+{
+  "name": "review-ml-paper",
+  "version": "1.0.0",
+  "description": "Generate concise English and Chinese ML/CS paper reviews plus a four-part Chinese paper interpretation.",
+  "author": {
+    "name": "JiaweiSheng",
+    "url": "https://github.com/JiaweiSheng"
+  },
+  "homepage": "https://github.com/JiaweiSheng/review-ml-paper",
+  "repository": "https://github.com/JiaweiSheng/review-ml-paper",
+  "license": "MIT",
+  "keywords": [
+    "machine-learning",
+    "paper-review",
+    "peer-review",
+    "academic",
+    "data-mining",
+    "computer-science"
+  ]
+}

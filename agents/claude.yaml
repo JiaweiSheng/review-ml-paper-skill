@@ -1,0 +1,3 @@
+frontmatter:
+  user-invocable: true
+  argument-hint: "[manuscript, PDF, or review notes]"

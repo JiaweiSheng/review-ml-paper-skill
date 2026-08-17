@@ -1,0 +1,18 @@
+{
+  "name": "review-ml-paper",
+  "owner": {
+    "name": "JiaweiSheng",
+    "url": "https://github.com/JiaweiSheng"
+  },
+  "metadata": {
+    "description": "ML / CS paper review skill for Cursor, Codex, and Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "review-ml-paper",
+      "source": "./",
+      "description": "Generate English and Chinese peer reviews plus a four-part Chinese paper interpretation."
+    }
+  ]
+}

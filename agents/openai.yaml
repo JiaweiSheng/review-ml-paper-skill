@@ -1,0 +1,4 @@
+interface:
+  display_name: "ML Paper Reviewer"
+  short_description: "生成精炼的英中论文审稿意见及四部分中文论文解读辅助理解"
+  default_prompt: "Use $review-ml-paper to produce a concise formal English review, a four-part Chinese paper interpretation, and a faithful Chinese review."
