@@ -7,6 +7,7 @@
 - Write Weaknesses as fluent prose; issue, impact, and suggestion are optional ingredients, not required labels.
 - Default to English review, Chinese interpretation, and Chinese review; follow English-only or Chinese-only when the user asks.
 - Add a four-tier suggested recommendation after the review: Accept, Weak Accept, Weak Reject, Reject.
+- Polish README wording and fix repository URLs to `JiaweiSheng/review-ml-paper-skill`.
 
 ## 1.0.0 — 2026-08-17
 

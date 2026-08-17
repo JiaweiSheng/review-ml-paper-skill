@@ -6,8 +6,8 @@
     "name": "JiaweiSheng",
     "url": "https://github.com/JiaweiSheng"
   },
-  "homepage": "https://github.com/JiaweiSheng/review-ml-paper",
-  "repository": "https://github.com/JiaweiSheng/review-ml-paper",
+  "homepage": "https://github.com/JiaweiSheng/review-ml-paper-skill",
+  "repository": "https://github.com/JiaweiSheng/review-ml-paper-skill",
   "license": "MIT",
   "keywords": [
     "machine-learning",
@@ -25,7 +25,7 @@
     "developerName": "JiaweiSheng",
     "category": "Productivity",
     "brandColor": "#2563EB",
-    "websiteURL": "https://github.com/JiaweiSheng/review-ml-paper",
+    "websiteURL": "https://github.com/JiaweiSheng/review-ml-paper-skill",
     "defaultPrompt": [
       "Use $review-ml-paper to review this manuscript.",
       "Write a conference-style English review, a four-part Chinese interpretation, and a matching Chinese review."
